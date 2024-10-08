@@ -1,4 +1,6 @@
-async function getHydraAccess(steamAuth) {
+require('dotenv').config();
+
+async function getHydraAccess() {
     try {
         const response = await fetch("https://raven-api.wbagora.com/access", {
             headers: {
@@ -7,7 +9,7 @@ async function getHydraAccess(steamAuth) {
             },
             method: "POST",
             body: JSON.stringify({
-                auth: { fail_on_missing: true, steam: steamAuth },
+                auth: { fail_on_missing: true, steam: process.env.STEAM_AUTH_CODE },
                 options: [
                     'configuration',
                     'achievements',
