@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QCStats</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script type="module" defer src="/js/script.js"></script>
 </head>
 <body>
-    <%- body %>
+    <div class="container">
+        <%- include('../partials/header.ejs') %>
+        <main class="main">
+            <%- body %>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </div>
 </body>
 </html>
