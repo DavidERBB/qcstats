@@ -9,4 +9,8 @@ router.get('/about', (req, res) => {
     res.render('about');
 });
 
+router.get('/profile/:page', (req, res) => {
+    res.render('profile');
+});
+
 module.exports = router;

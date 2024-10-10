@@ -15,5 +15,3 @@ async function test() {
     console.log(MatchData);
     console.log(test.timeElapsed)
 }
-
-test();
